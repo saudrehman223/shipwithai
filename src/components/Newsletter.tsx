@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /**
- * Newsletter signup â UI ONLY for now.
+ * Newsletter signup — UI ONLY for now.
  *
  * TODO: plug in a real provider before launch. Two common options:
  *   1. ConvertKit: create a form, then POST to
@@ -32,7 +32,7 @@ export function Newsletter() {
 
       <div className="relative mx-auto max-w-xl text-center">
         <p className="font-mono text-xs font-semibold tracking-widest text-brand-300 uppercase">
-          â¦ Newsletter
+          ✦ Newsletter
         </p>
         <h2
           id="newsletter-heading"
@@ -50,7 +50,7 @@ export function Newsletter() {
             role="status"
             className="mt-6 rounded-xl border border-brand-500/30 bg-brand-500/10 px-4 py-3 text-sm font-medium text-brand-200"
           >
-            You&apos;re on the list â check your inbox to confirm.
+            You&apos;re on the list — check your inbox to confirm.
           </p>
         ) : (
           <form
