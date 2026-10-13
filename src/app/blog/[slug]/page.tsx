@@ -97,7 +97,7 @@ export default async function ArticlePage({ params }: PageProps) {
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-brand-50 px-3 py-1 font-mono text-xs font-medium text-brand-700"
+                className="rounded-full border border-brand-500/25 bg-brand-500/10 px-3 py-1 font-mono text-xs font-medium text-brand-300"
               >
                 {tag}
               </span>
@@ -187,7 +187,7 @@ export default async function ArticlePage({ params }: PageProps) {
       <div className="mt-12 text-center">
         <Link
           href="/blog"
-          className="text-sm font-semibold text-brand-700 hover:underline"
+          className="text-sm font-semibold text-brand-300 hover:underline"
         >
           ← Back to all articles
         </Link>

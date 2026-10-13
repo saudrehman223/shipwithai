@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             href="https://www.google.com/settings/ads"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+            className="font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300"
           >
             Google Ads Settings
           </a>
@@ -92,7 +92,7 @@ export default function PrivacyPolicyPage() {
             href="https://policies.google.com/technologies/ads"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+            className="font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300"
           >
             Google&apos;s Advertising Technology page
           </a>
@@ -124,7 +124,7 @@ export default function PrivacyPolicyPage() {
           at{" "}
           <a
             href={`mailto:${siteConfig.contactEmail}`}
-            className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+            className="font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300"
           >
             {siteConfig.contactEmail}
           </a>
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
           Questions about this policy:{" "}
           <a
             href={`mailto:${siteConfig.contactEmail}`}
-            className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+            className="font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300"
           >
             {siteConfig.contactEmail}
           </a>

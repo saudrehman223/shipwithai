@@ -25,33 +25,37 @@ export function Newsletter() {
   return (
     <section
       aria-labelledby="newsletter-heading"
-      className="rounded-3xl border border-brand-200 bg-gradient-to-br from-brand-50 via-paper to-paper p-8 sm:p-12"
+      className="relative overflow-hidden rounded-3xl border border-brand-500/25 bg-gradient-to-br from-brand-600/[0.14] via-paper-soft to-paper-soft p-8 sm:p-14"
     >
-      <div className="mx-auto max-w-xl text-center">
-        <p className="font-mono text-xs font-semibold tracking-widest text-brand-600 uppercase">
-          Newsletter
+      <div aria-hidden="true" className="glow-orb -top-24 right-10 h-64 w-64 bg-brand-600/20" />
+      <div aria-hidden="true" className="glow-orb -bottom-28 -left-10 h-64 w-64 bg-accent-500/10" />
+
+      <div className="relative mx-auto max-w-xl text-center">
+        <p className="font-mono text-xs font-semibold tracking-widest text-brand-300 uppercase">
+          ✦ Newsletter
         </p>
         <h2
           id="newsletter-heading"
-          className="mt-3 text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl"
+          className="font-display mt-3 text-2xl font-bold tracking-tight text-ink-950 sm:text-4xl"
         >
-          One honest AI-tool breakdown, every week
+          One honest AI-tool breakdown,{" "}
+          <span className="text-gradient">every week</span>
         </h2>
-        <p className="mt-3 text-sm leading-6 text-ink-600">
-          No hype, no sponsored rankings. Just the tools we actually tested and
-          whether they&apos;re worth your money.
+        <p className="mt-3 text-sm leading-6 text-ink-600 sm:text-base">
+          No hype, no sponsored rankings. Just the tools we actually tested
+          and whether they&apos;re worth your money.
         </p>
         {done ? (
           <p
             role="status"
-            className="mt-6 rounded-xl bg-brand-600/10 px-4 py-3 text-sm font-medium text-brand-800"
+            className="mt-6 rounded-xl border border-brand-500/30 bg-brand-500/10 px-4 py-3 text-sm font-medium text-brand-200"
           >
             You&apos;re on the list — check your inbox to confirm.
           </p>
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="mt-6 flex flex-col gap-3 sm:flex-row"
+            className="mt-7 flex flex-col gap-3 sm:flex-row"
           >
             <label htmlFor="newsletter-email" className="sr-only">
               Email address
@@ -63,17 +67,17 @@ export function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="h-12 flex-1 rounded-xl border border-line bg-paper px-4 text-sm text-ink-900 placeholder:text-ink-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 focus:outline-none"
+              className="h-12 flex-1 rounded-xl border border-line bg-paper px-4 text-sm text-ink-950 placeholder:text-ink-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-500/30 focus:outline-none"
             />
             <button
               type="submit"
-              className="h-12 rounded-xl bg-brand-600 px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
+              className="h-12 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-7 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition-all hover:shadow-brand-500/40 hover:brightness-110"
             >
               Subscribe
             </button>
           </form>
         )}
-        <p className="mt-3 text-xs text-ink-400">
+        <p className="mt-3 font-mono text-xs text-ink-500">
           Free forever. Unsubscribe anytime.
         </p>
       </div>

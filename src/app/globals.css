@@ -1,17 +1,21 @@
 @import "tailwindcss";
 
 /* ============================================================
-   DESIGN TOKENS — restyle the whole blog from this one place.
-   These become Tailwind utilities (e.g. bg-brand-600, text-ink-900,
-   font-sans, font-mono) via the @theme directive (Tailwind v4).
+   DESIGN TOKENS — "Midnight Ship" theme.
+   Dark, high-contrast, dev-tool aesthetic. Restyle the whole
+   blog from this one place. These become Tailwind utilities
+   (e.g. bg-brand-500, text-ink-900, font-display) via @theme
+   (Tailwind v4).
    ============================================================ */
 @theme {
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui,
+    sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* Brand accent — change these to re-theme links, buttons, highlights */
+  /* Brand accent — vivid indigo→violet, tuned for dark surfaces */
   --color-brand-50: #eef2ff;
   --color-brand-100: #e0e7ff;
   --color-brand-200: #c7d2fe;
@@ -23,22 +27,28 @@
   --color-brand-800: #3730a3;
   --color-brand-900: #312e81;
 
-  /* Ink — body text scale (built on zinc) */
-  --color-ink-950: #09090b;
-  --color-ink-900: #18181b;
-  --color-ink-700: #3f3f46;
-  --color-ink-600: #52525b;
-  --color-ink-500: #71717a;
-  --color-ink-400: #a1a1aa;
+  /* Accent 2 — violet for gradients */
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
 
-  /* Paper — surfaces and borders */
-  --color-paper: #ffffff;
-  --color-paper-soft: #fafafa;
-  --color-line: #e4e4e7;
+  /* Ink — light text scale for dark backgrounds */
+  --color-ink-950: #fafafa;
+  --color-ink-900: #f4f4f5;
+  --color-ink-700: #d4d4d8;
+  --color-ink-600: #a1a1aa;
+  --color-ink-500: #71717a;
+  --color-ink-400: #52525b;
+
+  /* Paper — dark surfaces */
+  --color-paper: #08080d;
+  --color-paper-soft: #0e0e15;
+  --color-paper-raise: #15151e;
+  --color-line: rgba(255, 255, 255, 0.09);
 }
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 body {
@@ -47,6 +57,7 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
 /* Anchor offset so sticky headings aren't hidden under the header */
@@ -55,5 +66,96 @@ body {
 }
 
 ::selection {
-  background: var(--color-brand-200);
+  background: var(--color-brand-500);
+  color: #fff;
+}
+
+/* ---- Signature utilities ---- */
+
+/* Gradient headline text: indigo → violet → soft white */
+.text-gradient {
+  background: linear-gradient(100deg, #a5b4fc 0%, #818cf8 35%, #c4b5fd 70%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Faint blueprint grid backdrop */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Soft radial glow blobs */
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+/* Frosted glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(12px);
+}
+
+/* Gradient border card (hover glow for article cards) */
+.glow-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glow-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(129, 140, 248, 0.45);
+  box-shadow:
+    0 12px 40px -12px rgba(99, 102, 241, 0.35),
+    0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Tools marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 36s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Fade-up entrance */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-up-1 { animation-delay: 0.08s; }
+.fade-up-2 { animation-delay: 0.16s; }
+.fade-up-3 { animation-delay: 0.24s; }
+.fade-up-4 { animation-delay: 0.32s; }
+
+/* Thin styled scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a10;
+}
+::-webkit-scrollbar-thumb {
+  background: #26262e;
+  border-radius: 8px;
+  border: 2px solid #0a0a10;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a46;
 }

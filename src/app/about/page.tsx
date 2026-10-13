@@ -59,7 +59,7 @@ export default function AboutPage() {
           Have a tool you want us to test?{" "}
           <a
             href="/contact"
-            className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+            className="font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300"
           >
             Get in touch
           </a>

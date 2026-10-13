@@ -32,21 +32,20 @@ function P(props: ComponentProps<"p">) {
 function A(props: ComponentProps<"a">) {
   const href = props.href ?? "";
   const isExternal = /^https?:\/\//.test(href);
+  const className =
+    "font-medium text-brand-300 underline decoration-brand-500/50 underline-offset-2 hover:decoration-brand-300";
   if (isExternal) {
     return (
       <a
         {...props}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
+        className={className}
       />
     );
   }
   return (
-    <Link
-      href={href}
-      className="font-medium text-brand-700 underline decoration-brand-300 underline-offset-2 hover:decoration-brand-600"
-    >
+    <Link href={href} className={className}>
       {props.children}
     </Link>
   );
@@ -56,7 +55,7 @@ function Blockquote(props: ComponentProps<"blockquote">) {
   return (
     <blockquote
       {...props}
-      className="my-6 border-l-4 border-brand-300 bg-brand-50/60 py-1 pr-4 pl-5 text-ink-700 italic [&>p]:my-3"
+      className="my-6 border-l-4 border-brand-400/60 bg-brand-500/[0.08] py-1 pr-4 pl-5 text-ink-600 italic [&>p]:my-3"
     />
   );
 }
@@ -83,7 +82,7 @@ function Code(props: ComponentProps<"code">) {
   return (
     <code
       {...props}
-      className="rounded bg-ink-900/[0.06] px-1.5 py-0.5 font-mono text-[0.85em] text-ink-900"
+      className="rounded-md border border-line bg-white/[0.05] px-1.5 py-0.5 font-mono text-[0.85em] text-brand-200"
     />
   );
 }
@@ -92,7 +91,7 @@ function Pre(props: ComponentProps<"pre">) {
   return (
     <pre
       {...props}
-      className="my-6 overflow-x-auto rounded-xl bg-ink-950 p-5 font-mono text-sm leading-6 text-zinc-100 [&>code]:bg-transparent [&>code]:p-0 [&>code]:text-inherit"
+      className="my-6 overflow-x-auto rounded-xl border border-line bg-black/50 p-5 font-mono text-sm leading-6 text-zinc-100 [&>code]:border-0 [&>code]:bg-transparent [&>code]:p-0 [&>code]:text-inherit"
     />
   );
 }
