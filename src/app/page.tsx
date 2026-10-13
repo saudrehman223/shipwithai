@@ -6,14 +6,14 @@ import { ArticleCard, FeaturedArticleCard } from "../components/ArticleCard";
 import { Newsletter } from "../components/Newsletter";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} — ${siteConfig.tagline}`,
+  title: `${siteConfig.name} â ${siteConfig.tagline}`,
   description: siteConfig.description,
   alternates: { canonical: siteConfig.url },
 };
 
 // This page reads articles through src/lib/articles.ts, which awaits
 // connection() so the publishDate gate is evaluated per request. That makes
-// the route dynamic (blocking) rather than prerendered — declared explicitly
+// the route dynamic (blocking) rather than prerendered â declared explicitly
 // via `dynamic = "force-dynamic"` so request-time rendering (and real 404s)
 // works instead of partial prerendering.
 export const dynamic = "force-dynamic";
@@ -44,7 +44,7 @@ const TRUST_POINTS = [
   },
   {
     title: "Real pricing, real math",
-    body: "We show what tools actually cost per month — including the limits and gotchas hiding in the fine print.",
+    body: "We show what tools actually cost per month â including the limits and gotchas hiding in the fine print.",
   },
   {
     title: "Zero sponsored rankings",
@@ -54,7 +54,7 @@ const TRUST_POINTS = [
 
 export default async function HomePage() {
   // getPublishedArticles() awaits connection() internally, so this page
-  // renders dynamically per request — newly published articles appear
+  // renders dynamically per request â newly published articles appear
   // automatically without a rebuild (see src/lib/articles.ts).
   const articles = await getPublishedArticles();
   const [featured, ...rest] = articles;
@@ -81,7 +81,7 @@ export default async function HomePage() {
               <span className="max-w-64 truncate sm:max-w-none">
                 {featured.title}
               </span>
-              <span aria-hidden="true">→</span>
+              <span aria-hidden="true">â</span>
             </Link>
           )}
 
@@ -93,7 +93,7 @@ export default async function HomePage() {
 
           <p className="fade-up fade-up-2 mx-auto mt-6 max-w-xl text-base leading-7 text-ink-600 sm:text-lg sm:leading-8">
             We&apos;re designers and developers who test AI coding assistants,
-            design tools, and automation apps in real projects — then tell you
+            design tools, and automation apps in real projects â then tell you
             which ones are actually worth your money.
           </p>
 
@@ -108,7 +108,7 @@ export default async function HomePage() {
               href="/about"
               className="w-full rounded-xl border border-line bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-ink-900 backdrop-blur transition-colors hover:bg-white/[0.07] sm:w-auto"
             >
-              How we test →
+              How we test â
             </Link>
           </div>
 
@@ -145,7 +145,7 @@ export default async function HomePage() {
               >
                 {tool}
                 <span aria-hidden="true" className="text-brand-500">
-                  ✦
+                  â¦
                 </span>
               </span>
             ))}
@@ -172,7 +172,7 @@ export default async function HomePage() {
               href="/blog"
               className="shrink-0 text-sm font-semibold text-brand-300 hover:underline"
             >
-              View all →
+              View all â
             </Link>
           )}
         </div>
@@ -222,7 +222,7 @@ export default async function HomePage() {
       </section>
 
       {/* ============ NEWSLETTER ============ */}
-      <div className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-5 pb-16 sm:pb-20">
         <Newsletter />
       </div>
     </div>
