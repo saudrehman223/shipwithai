@@ -1,0 +1,110 @@
+---
+title: "Figma Make vs Galileo AI: AI UI Generation Showdown"
+description: "Figma Make vs Galileo AI compared honestly in 2026 — pricing, design-system fidelity, Figma export, and which AI UI generator fits your workflow."
+date: "2026-10-20"
+publishDate: "2026-10-20"
+tags: ["AI UI generation", "Figma Make", "Galileo AI", "comparisons"]
+slug: "figma-make-vs-galileo-ai"
+---
+
+Type a sentence, get a designed screen. That's the promise of AI UI generators — and in 2026, two tools approach it from opposite directions. **Figma Make** generates interactive prototypes *inside* your Figma file, living next to your components and variables. **Galileo AI** is a dedicated text-to-UI generator that produces polished screens you export *into* Figma when you're done.
+
+They look similar on a landing page. In a real workflow, they're almost opposites — and the difference that matters most isn't the output quality. It's **design-system fidelity**: whether the AI works *with* your components or just imitates the idea of them.
+
+Here's the honest breakdown of where each one wins, where each one burns your money, and which one fits your actual job.
+
+## Quick Verdict
+
+| | Figma Make | Galileo AI |
+|---|---|---|
+| **What it is** | Prompt-to-interactive-prototype inside Figma | Dedicated text-to-UI / image-to-UI generator |
+| **Free tier** | Starter plan: trial only, not day-to-day use | ~10 generations/month, designs are public |
+| **Entry paid** | $16/mo (Pro Full seat, 3,000 AI credits/mo) | $19/mo (Starter, ~120 generations) |
+| **Private mode** | Your files are private by default | Only on $39/mo Pro |
+| **Design-system aware** | Yes — uses your libraries and variables | No — generates fresh screens, no component linking |
+| **Best for** | Designers who live in Figma and want AI inside their system | Fast ideation and mockups from zero, especially outside Figma |
+
+**TL;DR:** Pick **Figma Make** if your design system is the source of truth — the AI generates inside your file, respects your components, and prototypes interactively in one motion. Pick **Galileo AI** if you want the fastest path from a sentence to a presentable screen and don't mind rebuilding in your own system afterward. And read the pricing section before you pay for either — both meter usage, in completely different ways.
+
+---
+
+## 1. Figma Make — The In-Canvas Builder
+
+Figma Make is Figma's prompt-to-prototype feature, and its superpower isn't the generation quality — it's the *context*. Make lives inside your file. It can see your components, your variables, your styles. When you prompt it, it builds with your actual design language, not a generic approximation of one.
+
+What stood out in real use:
+
+- **Design-system fidelity is real.** This is the thing no dedicated generator can match. Prompt Make for "an empty state for the billing page" and it reaches for your actual card component, your actual spacing tokens, your actual button styles. A designer with a mature system gets output that needs polish, not reconstruction.
+- **One motion: generate → interactive → iterate.** Make doesn't just draw screens — it makes them interactive. Attach it to an existing design and it wires up the prototype; describe changes in chat and it edits in place. "Fix for me" on errors is free (no credits burned), which is the kind of detail that matters when you're iterating.
+- **Plan mode before the build.** You can have Make plan the build first, then execute — charged separately, but it usually means fewer corrections afterward. Think of it as the difference between briefing a designer and micromanaging one.
+
+The catch — and it's a metering catch, not a quality catch: **credits.** Make only works day-to-day on a Full seat of a paid plan ($16/mo Professional gets you 3,000 AI credits/month; Organization $55 gets 3,500; Enterprise $90 gets 4,250). A simple change costs 30+ credits, making an attached design interactive costs 75+, and generating an app from scratch costs 100+. Do the math: at 3,000 credits a month, heavy Make use gives you roughly 30–40 full builds before the meter stops you. Credits reset monthly, don't roll over, and undoing an AI action does *not* refund them. Teams can buy shared credit add-ons, but the headline "$16/month" is not the real budget for a heavy user.
+
+Two more honest limits: Make is strongest at **single interactive prototypes**, not full multi-screen flows with settings, billing, and empty states — you still hold the system together. And its code is written for its own runtime; you can copy a preview back into Figma Design as layers, but if your goal is clean code in your own repo, that's not what Make is for.
+
+**For UI designers:** if you already pay for a Figma seat, Make is the lowest-friction AI in your stack. The question isn't whether it's good — it's whether your 3,000 monthly credits survive your workflow. Ration prompts, use Plan mode, and let "fix for me" do the cheap corrections.
+
+## 2. Galileo AI — The Dedicated Screen Generator
+
+Galileo AI is a purpose-built text-to-UI tool: describe a screen, get a designed interface. It also does image-to-UI — hand it a screenshot or sketch and it generates editable screens from it. No canvas, no components panel, no design system. Just prompts in, screens out, with Figma export and code export when you're happy.
+
+What it's best at:
+
+- **Speed from zero.** No file to set up, no libraries to attach. "A fintech onboarding flow, dark theme, 4 screens" and you have something presentable in minutes. For ideation, client pitches, and "show me ten directions by lunch," nothing in this comparison is faster.
+- **Figma export that works.** Unlimited Figma exports on paid plans — the screens land in Figma as editable layers. This is the whole business model: generate fast outside Figma, finish inside it.
+- **The cheapest real experiment.** The free tier (~10 generations a month) is enough to feel the tool out, and the entry paid tier is $19/month for ~120 generations. If you just want to try AI UI generation, this is the lowest-commitment door in.
+
+The catch: **Galileo doesn't know your design system.** Every generation is a fresh screen built from the model's instincts, not your components. What lands in Figma via export looks right but isn't *yours* — wrong tokens, wrong components, wrong naming. A designer with a real system will spend meaningful time re-skinning Galileo's output onto their components. That's not a flaw in the tool; it's the cost of generating outside your file. Also note: designs are **public** on the free tier *and* the $19 Starter plan — private mode only starts at $39/month Pro. If client work passes through this tool, that's a real line item.
+
+And then there's the elephant in the room: **Google Stitch.** The team behind Galileo AI went to Google, and Google's Stitch — a free-in-beta AI UI generator — covers strikingly similar ground. If you're choosing a tool for a twelve-month workflow, the standalone tool's roadmap is the honest question to ask before you commit to a paid plan.
+
+**For UI designers:** Galileo is an ideation accelerator, not a design-system citizen. Use it for directions and mockups, budget the re-skinning time honestly, and don't run client work through the public tier.
+
+---
+
+## Head-to-Head: The Things That Actually Matter
+
+**Design-system fidelity:** Figma Make, by a wide margin — it's the entire point of the tool. Make builds with your components; Galileo builds beautiful strangers you have to re-skin.
+
+**Speed from a cold start:** Galileo wins. No setup, no seat, no libraries — prompt in, screens out. Make needs a paid Figma seat and a file with context to be at its best.
+
+**Interactivity:** Make — it generates working interactive prototypes, not just screens. Galileo generates screens; you wire the prototype yourself after export.
+
+**Figma export quality:** Both export to Figma as editable layers. Galileo's exports are unlimited on paid plans; Make never needs exporting because it never leaves.
+
+**Real-world cost:** Both meter usage, differently. Make: ~3,000 AI credits/month on a $16 Pro seat, with full builds at 100+ credits each — budget-conscious prompting matters. Galileo: ~120 generations/month at $19, ~300 at $39 — predictable, but vague prompts that need ten regenerations eat the quota fast.
+
+**Privacy:** Make wins by default — your Figma files are private. Galileo keeps everything public until you pay $39/month for private mode.
+
+**Roadmap risk:** Make is Figma's first-party feature — it's not going anywhere. Galileo's team joined Google to build Stitch; the standalone product's future is the question nobody at the company will answer on the record.
+
+## Who Should Pick Which
+
+**Pick Figma Make if:**
+- You already live in Figma and your design system is the source of truth — Make is the only option here that respects it.
+- You want interactive prototypes from prompts, not just screens.
+- You already pay for a Pro seat — the marginal cost is learning to ration credits. ($16/mo seat + credit discipline.)
+
+**Pick Galileo AI if:**
+- You need fast UI directions from zero — pitches, ideation, mockups — without opening Figma first.
+- You don't have a design system (yet) and just need presentable screens quickly.
+- You want the cheapest experiment in the category. ($19/mo, but not for client work — remember the public-tier caveat.)
+
+**Pick neither (yet) if:**
+- You're choosing a 12-month tool today and want roadmap certainty — watch what Google does with Stitch, and watch Figma's credit pricing, before you lock in.
+
+**For UI designers and React developers specifically:** Make is the professional's tool — it plugs AI into the workflow you already have. Galileo is the freelancer's sketchbook — fast, cheap, and honest about what it is. The deciding question is simple: is your design system the asset, or is speed the asset?
+
+## The Honest Production Warning
+
+Neither of these replaces a designer — and neither claims to. What they replace is the *blank canvas*: the first hour of staring at an empty frame, the tenth variation of the same settings screen, the "show me three directions" request that used to eat a day.
+
+The output is a starting point, not a deliverable. Make's output needs a designer's eye on states, edge cases, and accessibility. Galileo's output needs re-skinning onto your system before it can ship. Anyone selling you "prompt to production" is selling you the demo, not the job.
+
+## Bottom Line
+
+There is no single winner — there are two different jobs. **Figma Make ($16/mo Pro seat, credit-metered)** is the in-canvas builder: AI that works inside your design system, generates interactive prototypes, and stays private by default — the professional's choice if you already pay for Figma. **Galileo AI ($19/mo, generation-metered)** is the dedicated screen generator: the fastest path from a sentence to a presentable screen, with honest Figma export — the ideation choice if speed beats system fidelity.
+
+My default advice? If you're a designer with a Figma seat, learn Make's credit discipline first — it's already in your stack. If you're ideating from zero, Galileo's free tier is the cheapest experiment in the category. And whichever you pick: watch the Stitch situation, confirm pricing before you pay, and never run client work through a public tier.
+
+*Pricing checked October 2026 — Galileo's pricing appears in both monthly and annual-billed forms across sources, so confirm the current structure on their pricing page before you pay. Figma's credit costs are approximate figures from Figma's own worked examples.*
