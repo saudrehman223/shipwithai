@@ -1,0 +1,113 @@
+---
+title: "Figma Make vs Google Stitch: AI UI Generation Showdown (2026)"
+description: "Figma Make vs Google Stitch compared honestly in 2026 — pricing, design-system fidelity, Figma workflow, and which AI UI generator fits how you design."
+date: "2026-10-20"
+publishDate: "2026-10-20"
+tags: ["AI UI generation", "Figma Make", "Google Stitch", "comparisons"]
+slug: "figma-make-vs-google-stitch"
+---
+
+Type a sentence, get a designed screen. That's the promise of AI UI generators — and in 2026, two tools approach it from opposite directions. **Figma Make** generates interactive prototypes *inside* your Figma file, living next to your components and variables. **Google Stitch** is a free, browser-based text-to-UI generator that produces polished multi-screen designs you bring *into* Figma — or straight into code.
+
+One note: an earlier version of this comparison featured Galileo AI — Google acquired the team in May 2025 and relaunched it as **Google Stitch**, free inside Google Labs. This is the updated matchup.
+
+They look similar on a landing page. In a real workflow, they're almost opposites — and the difference that matters most isn't output quality. It's **design-system fidelity**: whether the AI works *with* your components or just imitates the idea of them.
+
+Here's the honest breakdown of where each one wins, what each one actually costs, and which one fits your actual job.
+
+## Quick Verdict
+
+| | Figma Make | Google Stitch |
+|---|---|---|
+| **What it is** | Prompt-to-interactive-prototype inside Figma | Text/sketch/image-to-UI generator, browser-based |
+| **Free tier** | Starter: 500 AI credits/mo (150/day cap) | Free — no paid plan, usage capped, limits change often |
+| **Entry paid** | $16/mo (Pro Full seat, 3,000 AI credits/mo) | None — it's free |
+| **Private mode** | Your files are private by default | Google-account sign-in; it's a Labs experiment |
+| **Design-system aware** | Yes — uses your libraries and variables | No — generates fresh screens; DESIGN.md carries your rules |
+| **Best for** | Designers who live in Figma and want AI inside their system | Fast, free ideation and mockups from zero, plus quick code handoff |
+
+**TL;DR:** Pick **Figma Make** if your design system is the source of truth — the AI generates inside your file, respects your components, and prototypes interactively in one motion. Pick **Google Stitch** if you want the fastest free path from a sentence to a presentable screen — it costs nothing, pastes into Figma cleanly, and hands off to code surprisingly well. And read the pricing sections before you commit to either — one meters credits, the other is a free experiment with shifting limits.
+
+---
+
+## 1. Figma Make — The In-Canvas Builder
+
+Figma Make is Figma's prompt-to-prototype feature, and its superpower isn't the generation quality — it's the *context*. Make lives inside your file. It can see your components, your variables, your styles. When you prompt it, it builds with your actual design language, not a generic approximation of one.
+
+What stood out in real use:
+
+- **Design-system fidelity is real.** This is the thing no standalone generator can match. Prompt Make for "an empty state for the billing page" and it reaches for your actual card component, your actual spacing tokens, your actual button styles. A designer with a mature system gets output that needs polish, not reconstruction.
+- **One motion: generate → interactive → iterate.** Make doesn't just draw screens — it makes them interactive. Attach it to an existing design and it wires up the prototype; describe changes in chat and it edits in place. "Fix for me" on errors is free (no credits burned), which is the kind of detail that matters when you're iterating.
+- **Real data without leaving the canvas.** Make's native Supabase connection means prototypes can authenticate, read and write real data, and call APIs. That closes the old gap where Make's code only lived for its own runtime.
+
+The catch — and it's a metering catch, not a quality catch: **credits.** Make needs a Full seat on a paid plan: $16/mo Professional (billed annually; $20 month-to-month) for 3,000 AI credits, $55 Organization (3,500), $90 Enterprise (4,250). A simple change costs 30+ credits, an interactive prototype 75+, a from-scratch app 100+ — so 3,000 credits means roughly 30–40 full builds a month. Credits reset monthly, don't roll over, and undoing an AI action does *not* refund them. Since October 2026, Figma's agent and Weave tools share the same budget, so heavy Make use competes with your other Figma AI features. Top-ups ($120/mo for 5,000, $240/mo for 10,000) or pay-as-you-go ($0.03/credit) exist for heavy users. The free Starter tier's 500 credits/month (150/day cap) is a taste, not a workflow.
+
+**For UI designers:** if you already pay for a Figma seat, Make is the lowest-friction AI in your stack. The question isn't whether it's good — it's whether your 3,000 monthly credits survive your workflow. Ration prompts, use Plan mode, and let "fix for me" do the cheap corrections.
+
+## 2. Google Stitch — The Free Challenger
+
+Google Stitch is what the standalone Galileo AI became after Google acquired the team in May 2025: a free AI UI generator at stitch.withgoogle.com. Describe a screen — or hand it a sketch or an image — and it generates multi-screen UI with real HTML/CSS behind the elements, not flat mockups. The March 2026 "Vibe Design" expansion added an infinite canvas, voice interaction, a design agent, and instant prototyping. Sign in with a Google account and you're in: no credit card, no subscription, no paid plan as of October 2026.
+
+What it's best at:
+
+- **Speed from zero, for free.** No file to set up, no seat to pay for, no libraries to attach. "A fintech onboarding flow, dark theme, 4 screens" and you have something presentable in minutes. For ideation, client pitches, and "show me ten directions by lunch," nothing in this comparison is faster — and nothing else is free.
+- **Copy-to-Figma that actually works.** "Copy to Figma" plus the official Stitch-to-Figma plugin pastes screens into Figma as editable frames with layers and Auto Layout preserved. Honest caveats: pasting is screen-by-screen (no native .fig download), the copy option goes missing in some agent modes (switch modes before assuming it's gone), and image-based generations in Experimental mode don't support the Figma path.
+- **DESIGN.md — the design-rules file.** Stitch can import and export a DESIGN.md capturing your design rules, and even extract one from an existing website URL. It's the closest Stitch gets to "knowing" your system — feed it your rules and generations stay closer to your language. Not the same as generating inside your component library, but a real bridge.
+- **It speaks developer.** HTML/CSS/Tailwind snippets or a full project zip, direct export to Google AI Studio, Jules, and Netlify, plus an MCP server that plugs into coding tools — Antigravity, Cursor, Claude Code. The Stitch → Antigravity path is the one worth trying first: generate a screen in Stitch, push it through the MCP server, and see how much survives into runnable code.
+
+The catch: **Stitch doesn't know your design system.** Every generation is still a fresh build from the model's instincts, not your components. What lands in Figma looks right but isn't *yours* — expect to spend time re-skinning output onto your tokens. And the honest-limits list is real: strongest at exploration, weakest at pixel-discipline; generated screens often miss accessibility basics; layout patterns converge after dozens of screens; responsive means static breakpoints, not fluid layouts; single-user, no live collaboration.
+
+And the meta-catch: **it's a free Labs experiment.** Google publishes no fixed usage limits and they've shifted more than once — don't plan a workflow around a specific number; check the current allowance on stitch.withgoogle.com. There's no way to pay for more capacity, and one analyst speculates a $10–15/month tier if Stitch ever exits Labs — speculation only, but free forever is not a business model.
+
+**For UI designers:** Stitch is an ideation accelerator and a shockingly good free handoff tool — not a design-system citizen. Use it for directions, mockups, and fast code starts, and don't run sensitive client work through a Labs experiment without thinking about it.
+
+---
+
+## Head-to-Head: The Things That Actually Matter
+
+**Design-system fidelity:** Figma Make, by a wide margin — it's the entire point of the tool. Make builds with your components; Stitch builds from your DESIGN.md rules at best, then hands you screens to re-skin.
+
+**Speed from a cold start:** Stitch wins. Free, browser-based, no seat, no libraries — prompt in, screens out. Make needs a paid Figma seat and a file with context to be at its best.
+
+**Interactivity:** Make — it generates working interactive prototypes, not just screens. Stitch added instant prototyping in March 2026, but Make's generate-and-wire loop inside your file is the deeper workflow.
+
+**Figma export quality:** Closer than you'd expect. Stitch's copy-to-Figma lands as editable frames with Auto Layout preserved — genuinely usable, with the screen-by-screen caveat. Make never needs exporting because it never leaves.
+
+**Code handoff:** Stitch, clearly. MCP server to your IDE, project zip, AI Studio, Jules, Netlify — it's built for the design-to-code jump. Make copies previews back into Figma as layers and connects to Supabase for live data, but Stitch is the tool when the destination is your repo.
+
+**Real-world cost:** Free-but-capped (Stitch) versus credit-metered (Make). Stitch costs nothing and the meter is invisible until it isn't — check current limits. Make's meter is explicit: ~3,000 credits/month on a $16 Pro seat, full builds at 100+ credits each.
+
+**Privacy:** Make wins by default — your Figma files are private. Stitch runs on your Google account inside a Labs experiment; fine for exploration, think twice for client work.
+
+**Roadmap risk:** Make is Figma's first-party feature — it's not going anywhere. Stitch's risk is the reverse: free *today*, but a Labs experiment can gain pricing, change shape, or sunset. Keep Stitch workflows portable.
+
+## Who Should Pick Which
+
+**Pick Figma Make if:**
+- You already live in Figma and your design system is the source of truth — Make is the only option here that respects it.
+- You want interactive prototypes from prompts, not just screens.
+- You already pay for a Pro seat — the marginal cost is learning to ration credits. ($16/mo seat + credit discipline.)
+
+**Pick Google Stitch if:**
+- You need fast UI directions from zero — pitches, ideation, mockups — without opening Figma or paying anything.
+- You want a quick design-to-code jump: MCP into Antigravity or Cursor, zip download, DESIGN.md handoff.
+- You don't have a Figma seat and don't want one yet. (Free — just watch the shifting limits.)
+
+**Pick neither (yet) if:**
+- You need multi-user collaboration or pixel-disciplined, accessible output straight from AI — neither tool is there yet. Use them for the first 80%, finish like a professional.
+
+**For UI designers and React developers specifically:** Make is the professional's tool — it plugs AI into the workflow you already have. Stitch is the fastest free sketchbook with a real code exit — generate free, hand off via MCP, keep building in your own repo. The deciding question is simple: is your design system the asset, or is free speed the asset?
+
+## The Honest Production Warning
+
+Neither of these replaces a designer — and neither claims to. What they replace is the *blank canvas*: the first hour of staring at an empty frame, the tenth variation of the same settings screen, the "show me three directions" request that used to eat a day.
+
+The output is a starting point, not a deliverable. Make's output needs a designer's eye on states, edge cases, and accessibility. Stitch's output needs re-skinning onto your system before it can ship — and an accessibility pass, because the model won't do one for you. Anyone selling you "prompt to production" is selling you the demo, not the job.
+
+## Bottom Line
+
+There is no single winner — there are two different jobs. **Figma Make ($16/mo Pro seat, credit-metered)** is the in-canvas builder: AI that works inside your design system, generates interactive prototypes, and stays private by default — the professional's choice if you already pay for Figma. **Google Stitch (free, capped)** is the free challenger: the fastest path from a sentence to a presentable screen, with a genuinely good Figma-paste workflow and a code handoff worth testing — the ideation choice if speed beats system fidelity.
+
+My default advice? If you're a designer with a Figma seat, learn Make's credit discipline first — it's already in your stack. If you're ideating from zero, Stitch costs literally nothing to try — run the 15-minute Stitch-to-code test yourself and see. And whichever you pick: check Stitch's current limits before you plan around them, confirm Figma's credit math before you pay, and never treat AI output as shippable without a designer's pass.
+
+*Pricing and limits checked October 2026 — Stitch is free with no paid plan and unpublished, shifting usage caps, so treat any specific number you see online as approximate. Figma's credit costs are approximate figures from Figma's own worked examples.*
